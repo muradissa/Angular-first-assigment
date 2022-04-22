@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class ControlreviewComponent implements OnInit {
   reviews = [
     {
-      text: 'Angular step1' ,description:'deadline 21-4'
+      text: 'c' ,description:'deadline 21-4'
     },
     {
-      text: 'Angular step2' ,description:'deadline 21-4'
+      text: 'h' ,description:'deadline 21-4'
     }
     ,{
-      text: 'Angular step3' ,description:'deadline 21-4'
+      text: 'f' ,description:'deadline 21-4'
     }
     ,{
-      text: 'User Reviews System' ,description:'deadline 23-4'
+      text: 'e' ,description:'deadline 23-4'
     }
   ];
 
@@ -25,12 +25,28 @@ export class ControlreviewComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   deleteReview(review:any){
     this.reviews = this.reviews.filter(obj => obj !==review);
   }
 
  addReview(review:any){
+   if(review.text )
     this.reviews.push(review);
  }
+
+ sortfunc(){
+  this.reviews.sort(function (a :any, b:any) {
+    return a.text.localeCompare(b.text);
+  });
+ }
+ 
+ public sortfunc2(){
+  let i=0;
+  this.reviews.sort(function (a :any, b:any) {
+    return b.text.localeCompare(a.text);
+  });
+ }
+ 
 
 }

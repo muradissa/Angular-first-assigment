@@ -3,6 +3,7 @@
     placeholder="Name"
     [(ngModel)]="text"
     name="text"
+    (change)="enableButton($event)"
     /> 
 
     <p *ngIf="text.length > 0">       
@@ -13,9 +14,10 @@
     class = "form-control" 
     placeholder="Description"
     [(ngModel)]="text2"
-    name="text2"/>
+    name="text2"
+    (change)="enableButton($event)"/>
     
     <br/>
-    <button class="btn btn-primary btn-sm" style="float: right;" type="submit">Add</button>
+    <button class="btn btn-primary btn-sm" id="button1" [disabled]="true" style="float: right;" type="submit">Add</button>
     <br/>
 </form>
