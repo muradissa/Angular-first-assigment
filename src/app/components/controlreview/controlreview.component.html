@@ -1,0 +1,10 @@
+
+<app-cardreview 
+    *ngFor=" let review of reviews" 
+    (deleteEvent)="deleteReview($event)"    
+    [review]="review">
+</app-cardreview>
+
+<app-addreview 
+    (addReviewEvent)="addReview($event)">    
+</app-addreview>

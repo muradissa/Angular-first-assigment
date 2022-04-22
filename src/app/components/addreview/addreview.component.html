@@ -1,0 +1,21 @@
+<form>
+    <input class = "form-control" 
+    placeholder="Name"
+    [(ngModel)]="text"
+    name="text"
+    /> 
+
+    <p *ngIf="text.length > 0">       
+    </p>
+</form>
+<form (ngSubmit)="addReview()">
+    <input 
+    class = "form-control" 
+    placeholder="Description"
+    [(ngModel)]="text2"
+    name="text2"/>
+    
+    <br/>
+    <button class="btn btn-primary btn-sm" style="float: right;" type="submit">Add</button>
+    <br/>
+</form>
