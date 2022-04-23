@@ -1,24 +1,28 @@
 <form>
-    <input class = "form-control" 
-    placeholder="Name"
-    [(ngModel)]="text"
-    name="text"
-    (change)="enableButton($event)"
-    /> 
-
-    
+    <input 
+        class = "form-control" 
+        placeholder="Name"
+        [(ngModel)]="text"
+        name="text"
+        (change)="enableButton($event)"
+    />    
 </form>
 <form (ngSubmit)="addReview()">
     <input 
-    class = "form-control" 
-    placeholder="Description"
-    [(ngModel)]="text2"
-    name="text2"
-    (change)="enableButton($event)"
+        class = "form-control" 
+        placeholder="Description"
+        [(ngModel)]="text2"
+        name="text2"
+        (change)="enableButton($event)"
     />
-    
-    <br/>
-    
-    <button class="btn btn-primary btn-sm" id="button1" [disabled]="true" style="float: right;" type="submit">Add</button>
+    <br/>  
+    <button 
+        class="btn btn-primary btn-sm" 
+        id="button1" 
+        [disabled]="true" 
+        style="float: right;" 
+        type="submit">
+            Add
+    </button>
     <br/>
 </form>

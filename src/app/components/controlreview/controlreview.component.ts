@@ -31,16 +31,16 @@ export class ControlreviewComponent implements OnInit {
   }
 
  addReview(review:any){
-   if(review.text )
+   if(review.text)
     this.reviews.push(review);
  }
-
+ //Sort A-Z
  sortfunc(){
   this.reviews.sort(function (a :any, b:any) {
     return a.text.localeCompare(b.text);
   });
  }
- 
+ //Sort Z-A
  public sortfunc2(){
   let i=0;
   this.reviews.sort(function (a :any, b:any) {
@@ -48,5 +48,4 @@ export class ControlreviewComponent implements OnInit {
   });
  }
  
-
 }

@@ -15,9 +15,10 @@ export class CardreviewComponent implements OnInit {
   contentDisaplayButtpn:string ="none";
   saveBtn :any;
   bntStyle: string='btn-change';
+  username :string='';
   
   ngOnInit(): void {
-     
+    this.username=this.review.text;
   }
   
   delete(review: any){
@@ -26,18 +27,12 @@ export class CardreviewComponent implements OnInit {
 
   edit(review: any){
     this.bntStyle = 'btn-default';
-    this.contentEditable = true;
-    var saveBtn = (document.getElementById('save-button') as HTMLButtonElement);
-   // saveBtn.style.display = "inline";    
+    this.contentEditable = true;   
   }
   
   save(review : any){ 
     this.bntStyle = 'btn-change';
-    this.contentEditable = false; 
-    var saveBtn = (document.getElementById('save-button') as HTMLButtonElement );
-    //saveBtn.style.display = "none";
-    //this.contentDisaplayButtpn= "none";
+    this.contentEditable = false;    
   }
-  
-  
+   
 }

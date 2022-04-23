@@ -1,22 +1,32 @@
 
 <form>  
-<br>
-</form>
-
-<div class="btn-group" role="group" aria-label="Basic radio toggle button group"  >
-    
-    
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked (change)="sortfunc()">
-    <label class="btn btn-outline-primary" for="btnradio1">A- Z</label>
-  
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" (change)="sortfunc2()">
-    <label class="btn btn-outline-primary" for="btnradio2" > Z- A</label>
-    
-</div>
-<form>  
     <br>
 </form>
-
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">    
+    <input 
+        type="radio" 
+        class="btn-check" 
+        name="btnradio" 
+        id="btnradio1" 
+        autocomplete="off" 
+        checked 
+        (change)="sortfunc()"
+    >
+    <label class="btn btn-outline-primary" for="btnradio1">A- Z</label>
+    <input 
+        type="radio" 
+        class="btn-check"
+        name="btnradio" 
+        id="btnradio2" 
+        autocomplete="off" 
+        (change)="sortfunc2()"
+    >
+    <label class="btn btn-outline-primary" for="btnradio2" > Z- A</label>  
+   
+</div>
+<div>
+    <br>
+</div>
 <app-cardreview 
     *ngFor=" let review of reviews" 
     (deleteEvent)="deleteReview($event)"    
@@ -26,3 +36,4 @@
 <app-addreview 
     (addReviewEvent)="addReview($event)">    
 </app-addreview>
+
