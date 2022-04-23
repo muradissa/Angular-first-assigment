@@ -1,16 +1,44 @@
 <form >
     <div class="row">       
-       <div class="col-10">       
-            {{review.text}}    
-           <p style="color: #797979;"> 
+       <div class="col-10"> 
+
+        <p id="edit" [contentEditable]="contentEditable" ><b>
+            {{review.text}}
+        </b></p>   
+
+           <p id="pdescription" style="color: #797979;"> 
                <br>
                description : {{review.description}}
            </p>      
        </div>
-      
-       <div class="col-1">
-           <button class="btn btn-danger btn-sm" (click)="delete(review)" >Delete</button>
+      <div class="col-1">
+        <div class="btn-group">
+            
+            <button id="edit-button" type="button" class="btn btn-primary btn-sm" data-toggle="button" (click)="edit(review)" >
+              Edit
+            </button>
+       
+           <button class="btn btn-danger btn-sm" (click)="delete(review)" >
+               Delete
+            </button>
+        </div>
        </div>
+       
+    </div>
+    <div class="row-2">
+    <div class="btn-group" >
+        
+         
+        <button id="save-button"  type="button"   
+        class="btn btn-primary btn-sm" 
+        [ngClass]="[bntStyle]"      
+        
+        (click)="save(review)" 
+        >
+            Save
+        </button>
+    
+    </div>
     </div>
 </form>
 <div>

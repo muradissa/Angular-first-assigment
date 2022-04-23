@@ -1,5 +1,12 @@
 
 form{
-    background:#ebe7da;
+    background:#e4e3d4;
     padding: 12px;
+}
+.btn-default { 
+    display: inline;
+  }
+  
+.btn-change { 
+    display: none;
 }
